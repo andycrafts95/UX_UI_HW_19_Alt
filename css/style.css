@@ -28,7 +28,7 @@ header p {
 }
 .bioimage{
   height: 200px;
-  border-radius: 100px;
+  border-radius: 15px;
 }
 .content {
   max-width: 300px;
