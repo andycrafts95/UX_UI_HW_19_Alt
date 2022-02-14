@@ -1,6 +1,10 @@
 body {
   margin: 0;
 }
+h1{
+  font-family: 'Fugaz One', cursive;
+  font-size: 40px;
+}
 .logo {
   height: 100px;
 }
@@ -26,25 +30,32 @@ header p {
   padding: 25px 15px;
   background-image: url(../images/heroimage3.png);
 }
+.heroflex{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
 .bioimage{
-  height: 200px;
+  height: 225px;
   border-radius: 15px;
 }
 .content {
-  max-width: 300px;
+  max-width: 30%;
+  min-height: 200px;
   margin: 0 auto;
   padding: 50px;
   background-color: transparent;
   color: white;
   text-align: center;
-  font-size: 20px;
+  font-size: 22px;
   font-family:'Montserrat', sans-serif;
 }
 button {
   padding: 15px;
   background-color: #5b794a;
   color: white;
-  font-size: 16px;
+  font-size: 20px;
   border-radius: 8px;
   border: 0;
 }
@@ -60,6 +71,7 @@ footer {
   background-color: #3a2d32;
   padding: 5px;
   color: white;
+  position: static;
 }
 footer ul {
   list-style: none;
@@ -75,8 +87,8 @@ footer li {
   margin: 0;
   padding: 20px;
   text-align: center;
-  font-size: 48px;
-  font-family:'Montserrat', sans-serif;
+  font-size: 40px;
+  font-family:'Fugaz One', cursive;
   background-color: #3a2d32;
   color: white;
 }
@@ -93,7 +105,7 @@ footer li {
   width: 33%;
   padding: 25px;
   font-family:'Montserrat', sans-serif;
-  font-size: 20px;
+  font-size: 22px;
   ;
 }
 
@@ -119,15 +131,16 @@ footer li {
   margin: 0;
   padding: 20px;
   text-align: center;
-  font-size: 48px;
-  font-family: 'Montserrat', sans-serif;
+  font-size: 40px;
+  font-family: 'Fugaz One', cursive;
   color: white;
 }
 .workGrid img {
   width: 100%;
-  max-width: 250px;
+  max-width: 600px;
   margin: 0 auto;
   display: block;
+  border-radius: 15px;
 }
 .img1 {
   grid-area: img1;
@@ -143,17 +156,17 @@ footer li {
 }
 .content1 {
   grid-area: content1;
-  font-size: 20px;
+  font-size: 22px;
   font-family:'Montserrat', sans-serif;
 }
 .content2 {
   grid-area: content2;
-  font-size: 20px;
+  font-size: 22px;
   font-family:'Montserrat', sans-serif;
 }
 .content3 {
   grid-area: content3;
-  font-size: 20px;
+  font-size: 22px;
   font-family: 'Montserrat', sans-serif;
 }
 .workimg{
@@ -182,7 +195,9 @@ footer li {
   margin: auto;
   padding: 20px;
   border: 0px ;
-  width: 60%;
+  width: 50%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
 }
 
 /* The Close Button */
@@ -198,4 +213,23 @@ footer li {
   color: #000;
   text-decoration: none;
   cursor: pointer;
+}
+/* hw19 */
+@media only screen and (max-width: 600px){
+  .flexContainer div{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .workGrid{
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: "img1"
+                          "content1"
+                          "img2"
+                          "content2"
+                          "img3"
+                          "content3";
+
+  }
 }
